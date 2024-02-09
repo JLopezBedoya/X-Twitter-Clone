@@ -1,0 +1,18 @@
+body {
+  background-color: rgb(22, 24, 28);
+  margin: 0;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 25% auto 30%;
+  gap: 1px;
+  color: rgb(231, 233, 234);
+}
+.container > div {
+  background-color: rgb(0, 0, 0);
+}
+
+/*# sourceMappingURL=style.css.map */
