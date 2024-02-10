@@ -1,9 +1,9 @@
-import pct from "../assets/profile.jpg";
 import { FaSistrix, FaRegEnvelope, FaXTwitter, FaRegUser, FaEllipsis} from 'react-icons/fa6';
 import { GrHomeRounded } from "react-icons/gr";
 import { PiBellBold } from "react-icons/pi";
 import { RiFileList2Line } from "react-icons/ri";
 import { BsPeople } from "react-icons/bs";
+import UserData from '../assets/userdata';
 function UserBar(){
     return(
         <div className="bar">
@@ -22,12 +22,12 @@ function UserBar(){
             <button>POST</button>
             <article className='bar-user'>
                 <section className='bar-user-photo'>
-                    <img src={pct} alt="User Photo" />
+                    <img src={UserData.pct} alt="User's Photo" />
                 </section>
                 <section className="bar-user-name">
-                    <span>username</span>
+                    <span>{UserData.name}</span>
                     <br />
-                    @username2004
+                    {UserData.at}
                 </section>
                 <section>
                     <FaEllipsis/>

@@ -1,0 +1,80 @@
+.feed{
+    display: grid;
+    gap: 1px;
+    background-color: $tt_second;
+    & > section{
+        background-color: $tt_bg;
+    }
+    &-header{
+        display: grid;
+        grid-template-columns: 95% auto;
+        & > article{
+            display: flex;
+            justify-content: space-around;
+            h1{
+                color: lighten($tt_second, 20%);
+                margin-bottom: 0;
+            }
+            & > .active{
+                    color: $tt_contrast;
+                    border-bottom: 4px $tt_main solid;
+                    font-weight: bolder;
+                    font-size: 110%;
+                }
+        }
+    }
+    &-post{
+        display: grid;
+        grid-template-columns: 10% auto;
+        padding-top: 2%;
+        & > img{
+            width: 70%;
+            border-radius: 50%;
+            margin-left: 15%;
+        }
+        &-text{
+            textarea{
+                resize: none;
+                border: none;
+                color: $tt_contrast;
+                width: 90%;
+                height: 7vh;
+                background-color: $tt_bg;
+                font-size: 22px;
+            }
+            textarea:focus {
+                outline: none;
+                box-shadow: none; 
+            }
+        }
+        section{
+            display: grid;
+            grid-template-columns: 35% auto;
+            padding-right: 5%;
+            padding-bottom: 2vh;
+            svg{
+                font-size: 22px;
+            }
+            article{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                color: $tt_main;
+            }
+            div{
+                display: flex;
+                justify-content: end;
+                align-items: center;
+                button{
+                    background-color: $tt_main;
+                    color: $tt_contrast;
+                    font-weight: bold;
+                    width: 10vh;
+                    height: 5vh;
+                    border: none;
+                    border-radius: 15px;
+                }
+            }
+        }
+    }
+}
