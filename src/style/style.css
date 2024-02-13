@@ -71,6 +71,7 @@
 }
 .feed-header {
   display: grid;
+  height: 10vh;
   grid-template-columns: 95% auto;
 }
 .feed-header > article {
@@ -86,6 +87,16 @@
   border-bottom: 4px rgb(29, 155, 240) solid;
   font-weight: bolder;
   font-size: 110%;
+}
+.feed-move {
+  display: grid;
+  gap: 1px;
+  height: 90vh;
+  scrollbar-width: none;
+  overflow-y: scroll;
+}
+.feed-move > section {
+  background-color: rgb(0, 0, 0);
 }
 .feed-post {
   display: grid;
@@ -140,6 +151,58 @@
   border-radius: 15px;
 }
 
+.tweet {
+  display: grid;
+  grid-template-columns: 8% auto 10%;
+  gap: 2%;
+  padding: 3%;
+  max-width: 100%;
+}
+.tweet-pct {
+  grid-row: 1/4;
+}
+.tweet-pct img {
+  width: 100%;
+  border-radius: 50%;
+}
+.tweet-user {
+  display: flex;
+  gap: 1%;
+}
+.tweet-user-name {
+  font-weight: bold;
+}
+.tweet-user-at {
+  color: #4d636e;
+}
+.tweet-options {
+  text-align: center;
+}
+.tweet-content {
+  padding-top: 1vh;
+  grid-column: 2/4;
+}
+.tweet-reactions {
+  padding: 1vw 15% 0 0;
+  color: #4d636e;
+  display: flex;
+  justify-content: space-between;
+}
+.tweet-reactions svg {
+  font-size: 120%;
+}
+.tweet-reactions span {
+  display: flex;
+  gap: 1vh;
+  align-items: center;
+}
+.tweet-mark {
+  color: #4d636e;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 1vw;
+}
+
 body {
   background-color: rgb(35, 45, 50);
   margin: 0;
@@ -148,6 +211,7 @@ body {
 .container {
   width: 100vw;
   height: 100vh;
+  overflow-x: hidden;
   display: grid;
   grid-template-columns: 25% auto 30%;
   gap: 1px;

@@ -7,6 +7,7 @@
     }
     &-header{
         display: grid;
+        height: 10vh;
         grid-template-columns: 95% auto;
         & > article{
             display: flex;
@@ -22,6 +23,16 @@
                     font-size: 110%;
                 }
         }
+    }
+    &-move{
+        & > section{
+            background-color: $tt_bg;
+        }
+        display: grid;
+        gap: 1px;
+        height: 90vh;
+        scrollbar-width: none;
+        overflow-y: scroll;
     }
     &-post{
         display: grid;

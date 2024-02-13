@@ -1,6 +1,7 @@
 @import "./variables";
 @import "./UserBar";
 @import "./UserFeed";
+@import "./tweet";
 body{
     background-color: $tt_second;
     margin: 0;
@@ -8,6 +9,7 @@ body{
 .container{
     width: 100vw;
     height: 100vh;
+    overflow-x: hidden;
     display: grid;
     grid-template-columns: 25% auto 30%;
     gap: 1px;

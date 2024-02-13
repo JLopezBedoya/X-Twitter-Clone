@@ -3,8 +3,18 @@ import { MdOutlineGifBox } from "react-icons/md";
 import { PiSlidersHorizontalDuotone } from "react-icons/pi";
 import { HiOutlineFaceSmile } from "react-icons/hi2";
 import { LuCalendarClock } from "react-icons/lu";
-import UserData from "../assets/userdata";
+import UserData, { TweetGenerator, UserGenerator } from "../assets/userdata";
+import Tweet from "./tweet";
+import useGet from "./useGet";
 function UserFeed(){
+    const tweets = useGet("https://api.quotable.io/quotes/random?limit=6")
+    const random = useGet("https://randomuser.me/api/?results=6")
+    var data
+    var users
+    if(!tweets.load && !random.load){
+        data = TweetGenerator(tweets.datos)
+        users = UserGenerator(random.datos.results)
+    }
     return(
         <div>
             <article className="feed">
@@ -15,6 +25,7 @@ function UserFeed(){
                     </article>
                     <h1><IoSettingsOutline /></h1>
                 </section>
+                <div className="feed-move">
                 <section className="feed-post">
                     <img src={UserData.pct} alt="User's Photo" />
                     <article className="feed-post-text">
@@ -34,9 +45,11 @@ function UserFeed(){
                         </section>
                     </article>
                 </section>
-                <section>
-
-                </section>
+                {(!tweets.load && !random.load)? data.map((e,i)=>(
+                    <Tweet content={e} key={"Tweet#"+i} users={users}/>
+                )):<h1>Loading</h1>}
+                </div>
+                
             </article>
         </div>
     )
