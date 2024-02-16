@@ -1,0 +1,78 @@
+.news{
+    display: grid;
+    padding: 5%;
+    gap: 3vh;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    &-search{
+        display: grid;
+        place-items: center;
+        &-input{
+            color: $tt_contrast;
+            height: 50px;
+            width: 100%;
+            border-radius: 30px;
+            background-color: darken($tt_second, 8%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            input{
+                color: darken($tt_contrast, 30%);
+                padding-left: 5%;
+                font-size: 100%;
+                width: 90%;
+                height: 90%;
+                border-radius: 30px;
+                border: none;
+                background-color: darken($tt_second, 8%);
+                &:focus {
+                    outline: none;
+                    box-shadow: none; 
+                }
+            }
+            label{
+                display: flex;
+                align-items: center;
+                color: darken($tt_contrast, 50%);
+                font-size: 100%;
+                width: 5%;
+                padding-left: 5%;
+            }
+        }
+    }
+    &-trend{
+        padding: 0 5%;
+        border-radius: 15px;
+        background-color: darken($tt_second, 8%);
+        ul{
+            list-style: none;
+            padding: 0;
+            li{
+                margin: 10% 0;
+                display: grid;
+                gap: 2%;
+                span{
+                    color: darken($tt_contrast, 50%);
+                }
+                .trend{
+                    color: $tt_contrast;
+                    font-size: 120%;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    &-terms{
+        max-width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        span{
+            transition: 200ms color;
+            &:hover{
+                color: $tt-main;
+                cursor: pointer;
+            }
+        }
+    }
+}

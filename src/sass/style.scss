@@ -2,16 +2,16 @@
 @import "./UserBar";
 @import "./UserFeed";
 @import "./tweet";
+@import "./news";
 body{
     background-color: $tt_second;
     margin: 0;
 }
 .container{
-    width: 100vw;
     height: 100vh;
-    overflow-x: hidden;
+    overflow: hidden;
     display: grid;
-    grid-template-columns: 25% auto 30%;
+    grid-template-columns: 25% 45% auto;
     gap: 1px;
     color: $tt_contrast;
     & > div{

@@ -51,6 +51,17 @@
                 font-weight: bold;
             }
         }
+        &-follow{
+            background-color: $tt_contrast;
+            color: $tt_bg;
+            font-weight: bold;
+            height: 90%;
+            width: 25%;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     }
     .ellipsis{
         margin-bottom: 0;

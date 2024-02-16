@@ -1,6 +1,6 @@
 import pct from "../assets/profile.jpg";
 const UserData = {
-    name: "PlussUser",
+    name: "PlussUserawda",
     at: "@pluss2004",
     pct
 }
@@ -15,7 +15,7 @@ export function TweetGenerator(datos){
             rt: Math.floor(reactions * 0.60),
             comment: Math.floor(reactions * 0.40),
             chart: Math.floor(reactions * 1.1),
-            time: time+"m",
+            time: (time>0) ? time+"m":"Now",
             user: i
         })
     })

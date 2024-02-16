@@ -53,6 +53,17 @@
   font-size: 120%;
   font-weight: bold;
 }
+.bar-user-follow {
+  background-color: rgb(231, 233, 234);
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  height: 90%;
+  width: 25%;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .bar .ellipsis {
   margin-bottom: 0;
 }
@@ -203,17 +214,95 @@
   padding-top: 1vw;
 }
 
+.news {
+  display: grid;
+  padding: 5%;
+  gap: 3vh;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+.news-search {
+  display: grid;
+  place-items: center;
+}
+.news-search-input {
+  color: rgb(231, 233, 234);
+  height: 50px;
+  width: 100%;
+  border-radius: 30px;
+  background-color: #12171a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.news-search-input input {
+  color: #959ea3;
+  padding-left: 5%;
+  font-size: 100%;
+  width: 90%;
+  height: 90%;
+  border-radius: 30px;
+  border: none;
+  background-color: #12171a;
+}
+.news-search-input input:focus {
+  outline: none;
+  box-shadow: none;
+}
+.news-search-input label {
+  display: flex;
+  align-items: center;
+  color: #626b70;
+  font-size: 100%;
+  width: 5%;
+  padding-left: 5%;
+}
+.news-trend {
+  padding: 0 5%;
+  border-radius: 15px;
+  background-color: #12171a;
+}
+.news-trend ul {
+  list-style: none;
+  padding: 0;
+}
+.news-trend ul li {
+  margin: 10% 0;
+  display: grid;
+  gap: 2%;
+}
+.news-trend ul li span {
+  color: #626b70;
+}
+.news-trend ul li .trend {
+  color: rgb(231, 233, 234);
+  font-size: 120%;
+  font-weight: bold;
+}
+.news-terms {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.news-terms span {
+  transition: 200ms color;
+}
+.news-terms span:hover {
+  color: rgb(29, 155, 240);
+  cursor: pointer;
+}
+
 body {
   background-color: rgb(35, 45, 50);
   margin: 0;
 }
 
 .container {
-  width: 100vw;
   height: 100vh;
-  overflow-x: hidden;
+  overflow: hidden;
   display: grid;
-  grid-template-columns: 25% auto 30%;
+  grid-template-columns: 25% 45% auto;
   gap: 1px;
   color: rgb(231, 233, 234);
 }
