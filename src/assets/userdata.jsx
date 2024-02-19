@@ -1,6 +1,6 @@
-import pct from "../assets/profile.jpg";
+import pct from "../assets/profile0.jpg";
 const UserData = {
-    name: "PlussUserawda",
+    name: "PlussUser",
     at: "@pluss2004",
     pct
 }
@@ -33,4 +33,56 @@ export function UserGenerator(datos){
     })
     return users
 }
+export const newsData = [
+    {
+        topic: "Video Games",
+        title: "New TLOU3 trailer",
+        posts: "2.5k"
+    },
+    {
+        topic: "Sports",
+        title: "Real Madrid wins clásico",
+        posts: "3.2k"
+    },
+    {
+        topic: "Anime",
+        title: "New Attack on Titan season",
+        posts: "1.5k"
+    },
+    {
+        topic: "Technology",
+        title: "Apple unveils foldable iPhones",
+        posts: "4.4k"
+    },
+    {
+        topic: "Science",
+        title: "New Earth-like planet discovered",
+        posts: "2.2k"
+    },
+    {
+        topic: "Music",
+        title: "Beyoncé announces world tour",
+        posts: "7.6k"
+    },
+    {
+        topic: "Movies",
+        title: "Beyond the Spiderverse premieres",
+        posts: "4.1k"
+    },
+    {
+        topic: "Politics",
+        title: "Biden wins re-election",
+        posts: "5.3k"
+    },
+    {
+        topic: "Economy",
+        title: "Inflation decreases",
+        posts: "4.3k"
+    },
+    {
+        topic: "Environment",
+        title: "Concerns about climate change rise",
+        posts: "1.7k"
+    }
+];
 export default UserData

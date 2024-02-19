@@ -40,6 +40,15 @@
             display: flex;
             gap: 1vh;
             align-items: center;
+            cursor: pointer;
+            transition: 250ms;
+            user-select: none;
+        }
+        & > .love{
+            color: rgb(220, 20, 60);
+        }
+        & > .rt{
+            color: rgb(23, 163, 84);
         }
     }
     &-mark{

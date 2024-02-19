@@ -4,6 +4,7 @@ function useGet(url){
     const [ datos, setDatos ] = useState();
     const [ load, setLoad ] = useState(true);
     useEffect(()=>{
+        setLoad(true)
         fetch(url)
         .then(resp=>resp.json())
         .then(data=>setDatos(data))

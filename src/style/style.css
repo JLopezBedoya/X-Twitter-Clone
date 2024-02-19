@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 .bar {
   padding-left: 20%;
   padding-bottom: 2%;
@@ -92,6 +93,8 @@
 .feed-header > article h1 {
   color: #4d636e;
   margin-bottom: 0;
+  cursor: pointer;
+  transition: 200ms;
 }
 .feed-header > article > .active {
   color: rgb(231, 233, 234);
@@ -160,6 +163,10 @@
   height: 5vh;
   border: none;
   border-radius: 15px;
+  cursor: pointer;
+}
+.feed-post section div .des {
+  background-color: #07446d;
 }
 
 .tweet {
@@ -206,6 +213,15 @@
   display: flex;
   gap: 1vh;
   align-items: center;
+  cursor: pointer;
+  transition: 250ms;
+  user-select: none;
+}
+.tweet-reactions > .love {
+  color: rgb(220, 20, 60);
+}
+.tweet-reactions > .rt {
+  color: rgb(23, 163, 84);
 }
 .tweet-mark {
   color: #4d636e;
@@ -291,6 +307,12 @@
 .news-terms span:hover {
   color: rgb(29, 155, 240);
   cursor: pointer;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 body {

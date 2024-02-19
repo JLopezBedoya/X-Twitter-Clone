@@ -1,8 +1,11 @@
 import { FaRegComment, FaRetweet, FaRegHeart, FaRegBookmark, FaEllipsis } from "react-icons/fa6";
 import { LuUpload } from "react-icons/lu";
+import { useState } from "react";
 import { IoStatsChartSharp } from "react-icons/io5";
 function Tweet({content, users}){
     const user = users[content.user]
+    const [love, setLove] = useState(false)
+    const [rt, setRt] = useState(false)
     return(
         <section className="tweet">
             <article className="tweet-pct">
@@ -25,13 +28,13 @@ function Tweet({content, users}){
                     <FaRegComment />
                     {content.comment}
                 </span>
-                <span>
+                <span className={(rt)? "rt":""} onClick={()=>setRt(!rt)}>
                     <FaRetweet />
-                    {content.rt}
+                    {content.rt+((rt)?1:0)}
                 </span>
-                <span>
+                <span className={(love)? "love":""} onClick={()=>setLove(!love)}>
                     <FaRegHeart />
-                    {content.love}
+                    {content.love+((love)?1:0)}
                 </span>
                 <span>
                     <IoStatsChartSharp />
