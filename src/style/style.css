@@ -301,10 +301,10 @@
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
-.news-terms span {
+.news-terms a {
   transition: 200ms color;
 }
-.news-terms span:hover {
+.news-terms a:hover {
   color: rgb(29, 155, 240);
   cursor: pointer;
 }

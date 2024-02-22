@@ -1,4 +1,4 @@
-import pct from "../assets/profile0.jpg";
+import pct from "../assets/profile.jpg";
 const UserData = {
     name: "PlussUser",
     at: "@pluss2004",
